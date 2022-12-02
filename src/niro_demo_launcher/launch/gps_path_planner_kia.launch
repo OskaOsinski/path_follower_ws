@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+
+<launch>
+
+  <!-- Coordinate space transformation -->
+  <include file="$(find niro_demo_launcher)/launch/transform_def_kia.launch" />
+
+  <include file="$(find map_server_fev)/launch/CholerzynMap.launch"/>
+  
+  <include file="$(find niro_demo_launcher)/launch/gps_navigation_kia.launch"/>
+
+</launch>

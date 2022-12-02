@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+
+<launch>
+
+	<node name="rqt_gui_gps" pkg="rqt_gui" type="rqt_gui" args="--perspective-file $(find swift_nav_sbp_udp)/perspective/GpsState.perspective" output="screen"/>
+
+	  <node name="rqt_gui" pkg="rqt_gui" type="rqt_gui" args="--perspective-file $(find kia_control)/perspective/oscc_cmd.perspective" output="screen"/>
+</launch>

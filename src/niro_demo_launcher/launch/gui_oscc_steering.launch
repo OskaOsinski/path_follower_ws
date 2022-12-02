@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+
+<launch>
+
+  <rosparam command="load" file="$(find niro_demo_launcher)/config/kia_niro.yaml" />
+
+    <include file="$(find kia_control)/launch/kia_oscc_system.launch"/>
+    <include file="$(find swift_nav_sbp_udp)/launch/udpSwiftNavReceiver.launch" />
+    <node pkg="logic_swift_nav" type="logic_swift_nav" name="logic_swift_nav_node" output="screen"/>
+    <node name="rqt_gui_gps" pkg="rqt_gui" type="rqt_gui" args="--perspective-file $(find niro_demo_launcher)/perspective/RecordAndReplayGpsPath.perspective" output="screen"/>
+
+</launch>
+

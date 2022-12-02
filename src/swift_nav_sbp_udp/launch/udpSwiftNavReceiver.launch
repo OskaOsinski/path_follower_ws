@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+
+    <node pkg="swift_nav_sbp_udp" type="swift_nav_sbp_udp_node" name="swift_nav_sbp_udp_node" respawn="true" output="screen">
+        <param name="front_pixi_ip" value="192.168.1.101" />
+        <param name="heading_offset" value="1.570796327" />
+        <param name="fix_as_omnistar" value="true" />
+    </node>
+  
+</launch>

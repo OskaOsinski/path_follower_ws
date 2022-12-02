@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+
+  <node pkg="tsr_display" type="bitmap_receive" name="tsr_display" required="true">
+    <param name="workspace_path" value="$(env HOME)/niro-workspace/" type="str"/>
+  </node>
+  
+</launch>

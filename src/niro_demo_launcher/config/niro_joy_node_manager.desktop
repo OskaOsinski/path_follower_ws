@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Niro Joy Demo
+Comment=ROS joy demo launcher
+Exec=bash -c "source WORKSPACE/devel/setup.bash && roslaunch WORKSPACE/src//polysync/example/example.launch "
+Icon=PACKAGE/icon/fev_kia.png
+Type=Application
+Terminal=true
+Categories=ROS;
+StartupNotify=true

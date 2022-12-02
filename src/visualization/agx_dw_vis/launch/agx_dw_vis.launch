@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>  
+  <node pkg="agx_dw_vis" name="agx_dw_vis" type="visualization.py" output="screen">
+    <param name="topic_name" value="dwVis" />
+    <param name="ros_rate" value="0.2" />
+    <param name="dw_topic_names" value="/dw/topicNameList" />
+    <param name="data_signs_path" value="$(find agx_dw_vis)/data_signs.csv" />
+    <param name="data_objects_types" value="$(find agx_dw_vis)/data_objects_types.csv" />
+  </node>
+
+</launch>

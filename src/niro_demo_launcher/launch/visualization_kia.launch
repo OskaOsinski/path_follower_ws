@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+
+<launch>
+
+  <!-- ========================================================= -->
+  <!-- Rviz visualization nodes -->
+
+  <!-- Stl display launch file -->
+  <include file="$(find stl_display)/launch/mondeo_robot.launch" />
+
+  <!-- Tsr display launch file -->
+  <include file="$(find tsr_display)/launch/tsr_display.launch" />
+
+  <!-- Line display node -->
+  <node pkg="line_display" type="line_display" name="line_display" required="true"/>
+
+  <!-- Rviz render publish -->
+  <include file="$(find rviz_camera_stream)/launch/publish_lidar_render.launch" />
+
+  <!-- Visualization of ces_od, lidar and other road features -->
+  <node pkg="rviz" type="rviz" name="od_rviz" required="true" args="-d $(find niro_demo_launcher)/../../rviz/millbrook2018.rviz"/>
+
+</launch>

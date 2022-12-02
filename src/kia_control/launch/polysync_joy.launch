@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+
+<launch>
+ <arg name="autorepeat_rate" default="600" />
+  <node name="joy_node" pkg="joy" type="joy_node">
+  <param name="autorepeat_rate" value="153"/>
+ </node>
+  <node name="roscco_node" pkg="roscco" type="roscco_node"  output="screen"/>
+  <node name="kia_control_node" pkg="kia_control" type="kia_control_node" output="screen"/>
+</launch>

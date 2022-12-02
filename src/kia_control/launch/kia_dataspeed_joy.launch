@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+
+<launch>
+  <include file="$(find kia_control)/launch/kia_oscc_system.launch" />
+
+  <node name="joy_node" pkg="joy" type="joy_node">
+    <param name="deadzone" type="double" value="0.0"/>
+  </node>
+    <!-- Joystick demo -->
+    <arg name="ignore" default="false"/>
+    <arg name="enable" default="false"/>
+    <arg name="count" default="false"/>
+    <node pkg="dbw_mkz_joystick_demo" type="joystick_demo" name="joystick_demo" output="screen" >
+      <param name="ignore" value="$(arg ignore)" />
+      <param name="enable" value="$(arg enable)" />
+      <param name="count" value="$(arg count)" />
+    </node>
+
+</launch>

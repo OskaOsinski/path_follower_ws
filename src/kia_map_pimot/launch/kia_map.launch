@@ -1,0 +1,14 @@
+<launch>
+
+	<rosparam file="$(find kia_map_pimot)/config/params.yaml" />
+	
+  	<node pkg="kia_map_pimot" type="hello_gui_node" name="kia_steering_on_map" output="screen">
+	</node>
+	<node pkg="kia_map_pimot" type="write_msg_map.py" name="write_msg_node">
+	</node>
+
+</launch>
+
+
+
+

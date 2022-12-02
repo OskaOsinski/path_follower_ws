@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+
+<launch>
+    <param name="print_debug_messages" type="bool" value="false" />
+    <param name="maxThrottlePercent" type="double" value="0.5" />
+    <param name="maxBrakePercent" type="double" value="0.32" />
+    <param name="KP_throttle" type="double" value="2.3" />
+    <param name="KP_brake" type="double" value="0.22" />
+    <param name="stopCarHist" type="double" value="0.15" />
+    <param name="KP_heading" type="double" value="12.0" />
+    <param name="KP_dist" type="double" value="5.0" />
+
+    <param name="maxVelocity" type="double" value="5.0" />
+    <param name="minVelocity" type="double" value="1.6" />
+    <param name="casualVelocity" type="double" value="3.0" />
+    <param name="headingTimeCons" type="double" value="3.5" />
+
+    <param name="pathLenCurveEstim" type="double" value="3.0" />
+    <param name="upperRadiusCurve" type="double" value="250.0" />
+    <param name="minTimeToDest" type="double" value="1.0" />
+    <param name="localPathMaxLen" type="double" value="14.0" />
+
+    <param name="rampVelPerSec" type="double" value="1.0" />
+    <param name="slowOnGearHist" type="double" value="2.5" />
+
+  <node pkg="path_follower" type="path_follower" name="path_follower" output="screen">
+  </node>
+</launch>

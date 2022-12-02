@@ -1,0 +1,2 @@
+avoidance_path_topic: "/obstacle_avoidance_path"
+gps_topic: "/gps_state"

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<package>
+  <name>logic_swift_nav</name>
+  <version>0.0.1</version>
+  <description>Logic_swift_nav package</description>
+
+  <maintainer email="fev@fev.com"></maintainer>
+
+
+  <license>BSD</license>
+
+  <url type="website"></url>
+
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>roslint</build_depend>
+  <build_depend>roslib</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>tf2</build_depend>
+  <build_depend>tf2_ros</build_depend>
+  <build_depend>roscco</build_depend>
+  <build_depend>gps_msgs</build_depend>
+  <build_depend>swift_nav_sbp_udp</build_depend>
+
+  <run_depend>roscpp</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>roslib</run_depend>
+  <run_depend>tf2</run_depend>
+  <run_depend>tf2_ros</run_depend>
+  <run_depend>roscco</run_depend>
+  <run_depend>gps_msgs</run_depend>
+  <run_depend>swift_nav_sbp_udp</run_depend>
+
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+    <!-- Other tools can request additional information be placed here -->
+  </export>
+</package>

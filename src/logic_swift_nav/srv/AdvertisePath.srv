@@ -1,0 +1,7 @@
+string pathFileName
+---
+int8 FILE_OK=0
+int8 FILE_NOT_EXIST=1
+int8 FILE_INVALID=2
+
+int8 status

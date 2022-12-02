@@ -1,0 +1,21 @@
+vehicle_data:
+    kia_niro:
+        length: 4.355
+        width: 1.805
+        height: 1.545
+        axis_distance: 2.700
+        rear_axis_to_rear: 0.785
+    sensors:
+        gps:
+            offset_from_rear_axis_x: -0.35
+            offset_from_rear_axis_y: 0.0
+        front_lidar:
+            offset_from_rear_axis_x: 3.5
+            offset_from_rear_axis_y: 0.0
+            offset_from_rear_axis_z: 0.68
+            yaw_angle: 0.0
+        rear_lidar:
+            offset_from_rear_axis_x: -0.86
+            offset_from_rear_axis_y: 0.154
+            offset_from_rear_axis_z: 0.52
+            yaw_angle: 3.0963

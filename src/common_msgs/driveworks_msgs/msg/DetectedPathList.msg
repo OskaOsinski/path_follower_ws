@@ -1,0 +1,2 @@
+DetectedPath[] imageCoords
+DetectedPath[] worldCoords

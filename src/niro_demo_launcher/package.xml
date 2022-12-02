@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<package>
+  <name>niro_demo_launcher</name>
+  <version>0.0.0</version>
+  <description>
+    Placeholder for ROS launch file configuration,rviz files and scripts to display demos
+  </description>
+
+  <license>Comercial</license>
+  <author email="none@fev.com">None</author>
+  <maintainer email="none@fev.com">None</maintainer>
+  <url type="website"></url>
+  <url type="repository"></url>
+  <url type="bugtracker"></url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>message_generation</build_depend>
+
+  <run_depend>sensor_msgs</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>geometry_msgs</run_depend>
+  <run_depend>message_runtime</run_depend>  
+  
+  <export>
+  </export>
+</package>

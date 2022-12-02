@@ -1,0 +1,11 @@
+<launch>
+  <param name="steering_node/frontLidarFlag" type="bool" value="True" />
+  <param name="steering_node/yawAngleLidar" type="double" value="0.0" />
+  <param name="steering_node/heightPositionLidar" type="double" value="0.68" />
+  <param name="steering_node/latPositionLidar" type="double" value="0.0" />
+
+
+<node pkg="sim" type="sim_node" name="sim_node" output="screen">
+  </node> 
+
+</launch>

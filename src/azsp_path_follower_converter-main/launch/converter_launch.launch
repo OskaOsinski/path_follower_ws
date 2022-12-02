@@ -1,0 +1,6 @@
+<launch> 
+
+    <rosparam file="$(find azsp_path_follower_converter)/config/config.yaml"/>
+    <node name="path_converter" pkg="azsp_path_follower_converter" type="converter_node.py"  output="screen"/>
+
+</launch>

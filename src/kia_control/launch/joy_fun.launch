@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+
+<launch>
+  <include file="$(find kia_control)/launch/kia_oscc_system.launch"/>
+  <node name="joy_node" pkg="joy" type="joy_node">
+    <param name="deadzone" type="double" value="0.0"/>
+     <!--- <param name="autorepeat_rate" value="153"/> -->
+  </node>
+  <!---  <node name="kia_control_joy_node" pkg="kia_control" type="kia_control_joy_node" output="screen"/> -->
+  <node name="rqt_gui" pkg="rqt_gui" type="rqt_gui" args="--perspective-file $(find kia_control)/perspective/GUI+DynRec+Plot.perspective" output="screen"/>
+</launch>

@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+
+<launch>
+
+  <!-- Coordinate space transformation -->
+  <include file="$(find niro_demo_launcher)/launch/transform_def.launch" />
+
+  <!-- ========================================================= -->
+  <!-- Run sensors    -->
+
+  <!-- Front camera   -->
+  <include file="$(find cam)/launch/cam.launch" />
+
+  <!-- Velodyne lidar launch file -->
+  <include file="$(find velodyne_pointcloud)/launch/VLP16_points_aachen.launch" />
+
+  <!-- ========================================================= -->
+  <!-- Detection nodes -->
+
+  <!-- Object detection node BUG HERE need to be run from console-->
+  <node pkg="ces_od" type="ces_od_node" name="ces_od_node" required="true"/>
+
+  <!-- Line detector node -->
+  <node pkg="nline_detector" type="nline_detector" name="nline_detector" required="true"/>
+
+  <!-- ========================================================= -->
+  <!-- Rviz visualization nodes -->
+
+  <!-- Stl display launch file -->
+  <include file="$(find stl_display)/launch/mondeo_robot.launch" />
+
+  <!-- Tsr display launch file -->
+  <include file="$(find tsr_display)/launch/tsr_display.launch" />
+
+  <!-- Line display node -->
+  <node pkg="line_display" type="line_display" name="line_display" required="true"/>
+
+  <!-- Visualization of ces_od, lidar and other road features -->
+  <node pkg="rviz" type="rviz" name="od_rviz" required="true" args="-d $(find demo_launcher)/rviz/ces_od.rviz"/>
+
+  <!-- ========================================================= -->
+  <!-- Other nodes -->
+  <include file="$(find cloud_stream)/launch/toCloud.launch" />
+
+</launch>

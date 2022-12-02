@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<launch>
+
+
+    <param name="robot_description" command="cat $(find stl_display)/urdf/fusion_13_structure.urdf.xacro" />
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="mondeo_robot_state_pub" >
+        <remap from="joint_states" to="mondeo_joint_states" />
+    </node>
+
+    <node pkg="tf" type="static_transform_publisher" name="link_car_to_robot_base_link" args="-2.85 0.0 0.0 0 0 0 car_front_axel base_footprint 100" />
+
+    <node pkg="tf" type="static_transform_publisher" name="link_base_link_to_wheel_fl" args="2.85 0.8 0.0 0 0 -1.57 base_link wheel_fl 100" />
+    <node pkg="tf" type="static_transform_publisher" name="link_base_link_to_wheel_fr" args="2.85 -0.8 0.0 0 0 -1.57 base_link wheel_fr 100" />
+    <node pkg="tf" type="static_transform_publisher" name="link_base_link_to_wheel_rl" args="0.0 0.8 0.0 0 0 -1.57 base_link wheel_rl 100" />
+    <node pkg="tf" type="static_transform_publisher" name="link_base_link_to_wheel_rr" args="0.0 -0.8 0.0 0 0 -1.57 base_link wheel_rr 100" />
+
+    <node pkg="tf" type="static_transform_publisher" name="link_base_link_to_steer_fl" args="2.85 0.8 0.0 0 0 -1.57 base_link steer_fl 100" />
+    <node pkg="tf" type="static_transform_publisher" name="link_base_link_to_steer_fr" args="2.85 -0.8 0.0 0 0 -1.57 base_link steer_fr 100" />
+
+</launch>

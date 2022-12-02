@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<launch>  
+  <node pkg="polygon_to_triangle" name="polygon_to_triangle" type="polygon_to_triangle" output="screen">
+    <rosparam param="pcl_topics">["front_lidar_free_space", "rear_lidar_free_space"]</rosparam>
+    <rosparam param="kml_topics">["kml_polygons_to_grid"]</rosparam>
+    <rosparam param="fill_color">
+      pcl : [67, 205, 62, 80]
+      availableRoadArea : [145, 177, 199, 80]
+      availableOther : [73, 105, 128, 80]
+      building : [220,20,60, 80]
+      grass : [200, 255, 0, 80]
+      unavailableRoadArea : [139,0,0, 80]
+      unavailableOther  :  [139,0,0, 80]
+    </rosparam>
+  </node>
+ 
+</launch>

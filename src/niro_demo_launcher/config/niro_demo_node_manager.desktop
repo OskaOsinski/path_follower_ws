@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Niro Demo Node Manager
+Comment=ROS node manager with demo launcher
+Exec=bash -c "source WORKSPACE/devel/setup.bash && roslaunch niro_demo_launcher niro_demo_node_manager.launch "
+Icon=PACKAGE/icon/fev_kia.png
+Type=Application
+Terminal=true
+Categories=ROS;
+StartupNotify=true

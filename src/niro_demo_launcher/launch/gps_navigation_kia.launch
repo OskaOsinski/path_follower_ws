@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+
+<launch>
+
+  <arg name="runFollower" default="1" />
+  <arg name="runVisual" default="1" />
+
+  <rosparam command="load" file="$(find niro_demo_launcher)/config/kia_niro.yaml" />
+
+  <group if="$(arg runFollower)">
+    <include file="$(find kia_control)/launch/kia_oscc_system.launch"/>
+    <include file="$(find swift_nav_sbp_udp)/launch/udpSwiftNavReceiver.launch" />
+    <node pkg="logic_swift_nav" type="logic_swift_nav" name="logic_swift_nav_node" output="screen"/>
+    <include file="$(find path_follower)/launch/main_path_follower.launch"/>
+  
+  </group>
+ 
+  <group if="$(arg runVisual)">
+    <node name="rqt_gui_gps" pkg="rqt_gui" type="rqt_gui" args="--perspective-file $(find niro_demo_launcher)/perspective/RecordAndReplayGpsPath.perspective" output="screen"/>
+    <node pkg="rviz" type="rviz" name="rviz_gps_nav" args="-d $(find niro_demo_launcher)/rviz/gpsPathRecord.rviz"/>
+
+  </group>
+
+</launch>
+

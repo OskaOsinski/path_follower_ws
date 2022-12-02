@@ -1,0 +1,9 @@
+<launch>
+	<node name="default_cfg" pkg="default_cfg_fkie" type="default_cfg">
+    		<param name="autostart" value="False" />
+		<param name="package" value="niro_demo_launcher" />
+		<param name="launch_file" value="all_nodes.launch" />
+	</node>
+	<node name="node_manager" pkg="node_manager_fkie" type="node_manager">
+	</node>
+</launch>

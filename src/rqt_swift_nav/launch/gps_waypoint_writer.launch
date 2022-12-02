@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+
+<launch>
+
+  <node pkg="gps_waypoint_navigation" type="utm_converter" name="utm_converter" output="screen"/>
+  <node pkg="gps_waypoint_navigation" type="gps_waypoint_writer" name="gps_waypoint_writer" output="screen"/>
+
+</launch>
+

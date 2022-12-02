@@ -1,0 +1,21 @@
+uint16 raw_status
+
+bool SystemFailure
+bool AccelSensorFailure
+bool GyroSensorFailure
+bool MagnetSensorFailure
+
+bool PressureSensorFailure
+bool GNSSFailure
+bool AccelOverRange
+bool GyroOverRange
+
+bool MagnetOverRange
+bool PressureOverRange
+bool MinTemperatureAlarm
+bool MaxTemperatureAlarm
+
+bool LowVoltageAlarm
+bool HighVoltageAlarm
+bool GNSSAntennaShortCircuit
+bool DataOutputOverflowAlarm

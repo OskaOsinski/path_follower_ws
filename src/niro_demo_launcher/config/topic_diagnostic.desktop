@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Topic Diagnostic
+Comment=ROS rqt gui with topic diagnostic perspective
+Exec=bash -c "source WORKSPACE/devel/setup.bash && rosrun rqt_gui rqt_gui --perspective-file PACKAGE/config/Topic_Diagnostic.perspective  "
+Icon=PACKAGE/icon/fev.png
+Type=Application
+Terminal=true
+Categories=ROS;
+StartupNotify=true

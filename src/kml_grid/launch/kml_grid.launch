@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<launch>  
+  <node pkg="kml_grid" name="kml_grid" type="2grid.py" output="screen">
+        <param name="topic_name" value="map" />
+        <param name="ros_rate" value="0.2" />
+        <param name="map_width" value="3000" />
+        <param name="map_height" value="3000" />
+        <param name="map_resolution" value="0.2" />
+        <param name="ref_altitude" value="0" />
+        <param name="ref_longitude" value="21.01641101297994" />
+        <param name="ref_latitude" value="52.26955494964953" />
+        <param name="scale_x" value="0.3" />
+        <param name="scale_y" value="0.3" />
+        <param name="scale_z" value="0.3" />
+  </node>
+  <node pkg="kml_parser_publisher" name="kml_parser_publisher" type="parser.py" output="screen">
+        <param name="topic_name" value="kml_map" />
+        <param name="kml_map_path" value="$(find kml_parser_publisher)/maps/PiMot.kml" />
+        <param name="ros_rate" value="0.2" />
+        <param name="ref_altitude" value="276.7800229636" />
+        <param name="ref_longitude" value="21.01641101297994" />
+        <param name="ref_latitude" value="52.26978977461744" />
+        <param name="skipped_pts" value="3" />
+  </node>
+</launch>

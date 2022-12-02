@@ -1,0 +1,25 @@
+# Topics
+actual_kia_position_topic: "/gps_state"
+start_topic: "/valid_path"
+setpoint_topic: "/gps_setpoint"
+enable_topic: "/vehicle/oscc_enable_cmd"
+
+# path
+map_path: "/home/nvidia/path_follower_ws/src/kia_map_pimot/media/mapa_politechnika.png"
+background_path: "/home/nvidia/path_follower_ws/src/kia_map_pimot/media/dilate_politechnika.png"
+path_follower_path: "/home/nvidia/path_follower_ws/src/rqt_swift_nav/sciezka.json"
+
+# Map position
+coordinate_system:
+  xmin: 20.64276
+  xmax: 20.64901
+  ymin: 52.44321
+  ymax: 52.44517
+  image_size_x: 880.0
+  image_size_y: 414.0
+  diameter: 10
+  cliced_offset: 10
+
+
+
+
